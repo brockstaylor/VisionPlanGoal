@@ -1,3 +1,6 @@
+@extends('layouts.app')
+
+@section('content')
 <h1>Register</h1>
 <form method="post" action="/register">
     {{ csrf_field() }}
@@ -15,3 +18,4 @@
     <input type="submit" name="submit" value="Register" />
 
 </form>
+@endsection
