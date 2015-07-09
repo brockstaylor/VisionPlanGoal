@@ -4,18 +4,33 @@
 <h1>Register</h1>
 <form method="post" action="/register">
     {{ csrf_field() }}
-    <label for="fname">First Name</label>
-    <input type="text" name="fname" />
-    <label for="lname">Last Name</label>
-    <input type="text" name="lname" />
-    <label for="email">Email Address</label>
-    <input type="email" name="email" />
-    <label for="password">Password</label>
-    <input type="password" name="password" />
-    <label for="password_confirmation">Confirm Password</label>
-    <input type="password" name="password_confirmation" />
-    <input type="checkbox" name="subscribe" checked />
-    <input type="submit" name="submit" value="Register" />
+    <div class="form-group">
+        <label for="fname">First Name</label>
+        <input class="form-control" type="text" name="fname" id="fname" />
+    </div>
+    <div class="form-group">
+        <label for="lname">Last Name</label>
+        <input class="form-control" type="text" name="lname" id="lname" />
+    </div>
+    <div class="form-group">
+        <label for="email">Email Address</label>
+        <input class="form-control" id="email" type="email" name="email" />
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input class="form-control" type="password" name="password" id="password" />
+    </div>
+    <div class="form-group">
+        <label for="password_confirmation">Confirm Password</label>
+        <input class="form-control" type="password" name="password_confirmation" id="password_confirmation" />
+    </div>
+    <div class="form-group">
+        <label for="subscribe">Subscribe to the newsletter </label>
+        <input type="checkbox" name="subscribe" id="subscribe" checked />
+    </div>
+    <div class="form-group">
+        <input class="btn btn-success" type="submit" name="submit" value="Register" />
+    </div>
 
 </form>
 @endsection
